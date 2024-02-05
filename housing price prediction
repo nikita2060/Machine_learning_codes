@@ -7,14 +7,34 @@ import matplotlib.pyplot as plt
 x_train = np.array([1.0,2.0])
 y_train = np.array([300.0,500.0])
 
-print(f"x_train = {x_train}");
-print(f"y_train = {y_train}");
+print(f"x_train = {x_train}")
+print(f"y_train = {y_train}")
 
-#plot the points
+def compute_prices(x, w, b):
+    """
+    Computes price using linear regression model
+    param x(ndarray(m,)): Data(size), m = number of data
+    param w and param b: model parameters
+    return: Price_array(ndarray(m,))
+    """
+    m = x.shape[0]
+    Price_array = np.zeros(m)
+    for i in range(m):
+        Price_array[i] = w * x[i] + b
+
+    return Price_array
+
+
+output = compute_prices(x_train, w, b)
+
+# plotting our model prediction(in line)
+plt.plot(x_train, output, c='b', label='Our prediction')
+# plot actual data points(only data points)
 plt.scatter(x_train, y_train, marker='x', c='r')
-#set graph title
+# set graph title
 plt.title("Housing Prices")
-#set x and y labels
 plt.xlabel("Size(in 1000 square feet)")
 plt.ylabel("Price(in 1000s of dollars)")
+plt.legend()
 plt.show()
+
