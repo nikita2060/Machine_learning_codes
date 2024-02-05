@@ -1,12 +1,20 @@
-import numpy
+import numpy as np
 import matplotlib.pyplot as plt
-plt.style.use('/.deeplearning.mplstyle)
+# plt.style.use('/.deeplearning.mplstyle) I dont know the path to this deeplearning style ,this code was in the course but has error
 
-  #x_train is training input dataset(size in 1000 square feet)
-  #y_train is target (price in 1000s of dollars)
+#x_train is training input dataset(size in 1000 square feet)
+#y_train is target (price in 1000s of dollars)
 x_train = np.array([1.0,2.0])
 y_train = np.array([300.0,500.0])
 
 print(f"x_train = {x_train}");
 print(f"y_train = {y_train}");
 
+#plot the points
+plt.scatter(x_train, y_train, marker='x', c='r')
+#set graph title
+plt.title("Housing Prices")
+#set x and y labels
+plt.xlabel("Size(in 1000 square feet)")
+plt.ylabel("Price(in 1000s of dollars)")
+plt.show()
