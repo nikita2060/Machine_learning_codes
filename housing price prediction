@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-# plt.style.use('/.deeplearning.mplstyle) I dont know the path to this deeplearning style ,this code was in the course but has error
-
+# plt.style.use('/path/to/deeplearning.mplstyle') I dont know the path to this deeplearning style 
 #x_train is training input dataset(size in 1000 square feet)
 #y_train is target (price in 1000s of dollars)
 x_train = np.array([1.0,2.0])
