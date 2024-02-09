@@ -14,6 +14,7 @@ train_df["median_house_value"] /= scale_factor
 test_df["median_house_value"] /= scale_factor
 
 #@title Define the functions that build and train a model
+
 def build_model(my_learning_rate):
   """Create and compile a simple linear regression model."""
   # Most simple tf.keras models are sequential.
